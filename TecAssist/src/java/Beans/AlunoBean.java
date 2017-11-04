@@ -9,6 +9,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import Modelos.Aluno;
 import Persistencia.AlunoDAO;
+import java.util.ArrayList;
+import java.util.Collections;
 /**
  *
  * @author Erick
@@ -58,4 +60,12 @@ public class AlunoBean {
     public void novo() {
         aluno = new Aluno();
     }
-}
+    
+    public Aluno SorteiaAluno(List<Aluno> Alunos) {
+        Collections.shuffle(Alunos);
+        return ((Aluno) Alunos.get(0));
+        }
+    
+    
+    }
+
